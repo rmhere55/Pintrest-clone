@@ -166,11 +166,11 @@
     .card-title {
       margin: 0;
       font-size: 1.2em;
-      color: #333;
+      color:  #fff7f7 ;
     }
     .card-text {
       font-size: 0.9em;
-      color: #555;
+      color: #fff7f7;
       margin: 5px 0;
     }
     .card-actions {
@@ -186,7 +186,7 @@
       transition: background-color 0.3s ease;
     }
     .card-actions button:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(249, 247, 247, 0.1);
     }
     .card-overlay {
       position: absolute;
