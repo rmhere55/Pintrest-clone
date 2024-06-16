@@ -1,0 +1,171 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Pinterest UI</title>
+  <!-- <link rel="stylesheet" href="/stylesheets/feed.css"> -->
+   <!-- <link rel="stylesheet" href="/stylesheets/feed.css"> -->
+   <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/stylesheets/feed.css">
+<script src="/javascripts/feed.js"></script>
+
+  <!-- <style>  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    
+  }
+  .container {
+    display: flex;   
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    width: 270px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card-body {
+    padding: 10px;
+
+  }
+  .card-title {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  .card-text {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+  }
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .card-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .card-actions button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .card:hover .card-overlay {
+    opacity: 1;
+  }
+  .card-overlay i {
+    font-size: 24px;
+    color: #fff;
+  }
+</style> -->
+</head>
+<body>
+  <div class="header">
+    <div class="header-logo">
+      <i class="fa-brands fa-pinterest fa-xl" style="color: #b8281e;"></i>
+    </div>
+    <div class="header-nav">
+      <a href="#">Home</a>
+      <a href="#">Explore</a>
+      <a href="#">Create</a>
+    </div>
+    <div class="header-search">
+      <input type="text" placeholder="Search">
+      <i class="search-icon fa fa-search"></i>
+    </div>
+    <div class="header-notifications">
+      <div class="notification">
+        <i class="fa fa-bell"></i>
+        <span class="notification-count">99+</span>
+      </div>
+      <div class="notification">
+        <i class="fa fa-comment"></i>
+      </div>
+    </div>
+    <div class="header-user" >
+      <img src="https://i.pinimg.com/originals/65/42/e2/6542e2410f65f53e85b5f8d4c21a4e48.png" alt="User Profile Picture">
+      <div class="user-dropdown">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Card template -->
+    <div class="card" style="background-image: url('https://picsum.photos/500/400?random=1');">
+      <div class="card-body">
+        <h3 class="card-title">Card Title</h3>
+        <p class="card-text">Card Description</p>
+        <div class="card-actions">
+          <button>
+            <i class="fa-regular fa-circle-down fa-xl" style="color: #333;"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-share" style="color: #333;"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-overlay">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+    <!-- Add more cards as needed -->
+  </div>
+
+
+  <div class="notification-box">
+    <i class="close-button fa fa-times" onclick="closeNotification()"></i>
+    <h3>Notifications</h3>
+    <ul>
+      <li><a href="#">You have a new message from John Doe.</a></li>
+      <li><a href="#">Your friend Jane Doe liked your post.</a></li>
+      <li><a href="#">Your pin was saved by 10 people.</a></li>
+    </ul>
+  </div>
+
+  <!-- <div class="terms-and-policy" id="termsAndPolicy">
+    <i class="close-button fa fa-times" onclick="closeTermsAndPolicy()"></i>
+    <div class="terms-and-policy-content">
+      <h2>Terms and Policy Updates</h2>
+      <p>We have updated our Terms of Service and Privacy Policy. These updates took effect on March 13, 2024.</p>
+      <button onclick="closeTermsAndPolicy()">Got it</button>
+    </div>
+  </div> -->
+<script src="/javascripts/feed.js"></script>
+</body>
+</html> 
