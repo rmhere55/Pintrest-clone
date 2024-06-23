@@ -17,8 +17,11 @@ const userSchema = new Schema({
         // required: true
     },
     posts: {
+    //   type:mongoose.Schema.Types.ObjectId,
+    //   ref:'User',
+
       type:mongoose.Schema.Types.ObjectId,
-      ref:'User',
+      ref:'Post',  
     },
     dp: {
         type: String, // URL to the display picture

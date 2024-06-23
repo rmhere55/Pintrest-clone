@@ -3,16 +3,25 @@ const Schema = mongoose.Schema;
 
 // Define the Post schema
 const postSchema = new Schema({
-    postText: {
+    imageText: {
         type: String,
-        // required: true,
-        trim: true
+        required: true,
+        // trim: true
     },
-    
+    image:{
+        type: String
+
+    },
     user:{
         type : mongoose.Schema.Types.ObjectId,
-        ref:'Post'
+        ref:'User'
     },
+
+    // posts: [{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Post'
+    // }]
+    
     createdAt: {
         type: Date,
         default: Date.now,
